@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Intro</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #0a0a0f;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+    }
+    .bg img, .bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.45) saturate(1.1);
+    }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.7) 100%);
+      z-index: -1;
+    }
+
+    /* Card */
+    .card {
+      width: 90%;
+      max-width: 420px;
+      background: rgba(20, 20, 28, 0.75);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 32px 28px 28px;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      animation: fadeUp 0.7s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Banner strip */
+    .banner {
+      width: 100%;
+      height: 110px;
+      border-radius: 16px;
+      object-fit: cover;
+      margin-bottom: -45px;
+      border: 2px solid rgba(255,255,255,0.1);
+    }
+
+    /* PFP */
+    .pfp-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    .pfp {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #1a1a24;
+      box-shadow: 0 0 0 3px #5865F2, 0 0 25px rgba(88, 101, 242, 0.5);
+    }
+    .status {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      width: 22px;
+      height: 22px;
+      background: #23a559;
+      border: 3px solid #1a1a24;
+      border-radius: 50%;
+    }
+
+    .name {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+    .tag {
+      font-size: 0.95rem;
+      color: #a0a0b0;
+      margin-bottom: 18px;
+    }
+
+    .bio {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #c8c8d4;
+      margin-bottom: 26px;
+      padding: 0 8px;
+    }
+
+    /* Links */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+    .link:hover {
+      background: rgba(88, 101, 242, 0.25);
+      border-color: #5865F2;
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      margin-top: 22px;
+      font-size: 0.75rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BACKGROUND (replace with your banner/video) -->
+  <div class="bg">
+    <!-- Option 1: Image -->
+    <img src="https://your-banner-image-url-here.jpg" alt="banner" />
+    
+    <!-- Option 2: Video (uncomment and comment the img above) -->
+    <!--
+    <video autoplay muted loop playsinline>
+      <source src="https://your-video-url.mp4" type="video/mp4">
+    </video>
+    -->
+  </div>
+  <div class="overlay"></div>
+
+  <div class="card">
+    <!-- Optional top banner strip -->
+    <img class="banner" src="https://your-banner-image-url-here.jpg" alt="banner strip" />
+
+    <div class="pfp-wrap">
+      <!-- YOUR DISCORD PFP -->
+      <img class="pfp" src="https://cdn.discordapp.com/avatars/YOUR_USER_ID/YOUR_AVATAR_HASH.png?size=256" alt="pfp" />
+      <div class="status"></div>
+    </div>
+
+    <div class="name">Your Name</div>
+    <div class="tag">@yourdiscord • he/him</div>
+
+    <div class="bio">
+      Just a chill guy who likes games, music and late-night talks.<br>
+      Feel free to add me ✨
+    </div>
+
+    <div class="links">
+      <a class="link" href="https://discord.com/users/1309913011221430393" target="_blank">Discord</a>
+      <!-- Add more links as needed -->
+    </div>
+
+    <div class="footer">made with ❤️</div>
+  </div>
+
+</body>
+</html>
